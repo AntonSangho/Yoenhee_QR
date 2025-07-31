@@ -3,7 +3,11 @@ import matplotlib.pyplot as plt
 import pyzbar.pyzbar as pyzbar
 
 img = cv2.imread('../img/bh_bar.jpg')
-plt.imshow(img)
+#plt.imshow(img)
+#plt.show()
+
+gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+plt.imshow(gray, cmap='gray')
 plt.show()
 
 cv2.waitKey(0)

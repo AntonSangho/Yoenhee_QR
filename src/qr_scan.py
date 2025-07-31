@@ -10,5 +10,9 @@ gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 plt.imshow(gray, cmap='gray')
 plt.show()
 
+decoded = pyzbar.decode(gray)
+
+print(decoded) 
+
 cv2.waitKey(0)
 cv2.destroyAllWindows()
